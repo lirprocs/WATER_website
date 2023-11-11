@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <title>Продукция</title>
+    <link rel="icon" href="{% static 'media/images/2ad6f96f-06ca-5451-e5e7-00ab06c825b4.PNG' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
 <link rel="stylesheet" href="{% static 'css/products.css' %}" media="screen">
     <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
@@ -72,14 +73,14 @@
           <div class="u-tab-content">
             <div class="u-container-style u-shape-rectangle u-tab-active u-tab-pane" id="tab-0da5" role="tabpanel" aria-labelledby="link-tab-0da5">
               <div class="u-container-layout u-container-layout-1">
-                <img class="u-image u-image-default u-image-1" src="{% static 'media/images/Frame2.1.jpg' %}" alt="" data-image-width="2209" data-image-height="1271"><span class="u-file-icon u-icon u-icon-rectangle u-text-custom-color-10 u-icon-1"><img src="{% static 'media/images/1635633-194385ee.png' %}" alt=""></span>
+                <img id="Image_SELL" class="u-image u-image-default u-image-1" src="{% static 'media/images/Frame2.1.jpg' %}" alt="" data-image-width="2209" data-image-height="1271"><span class="u-file-icon u-icon u-icon-rectangle u-text-custom-color-10 u-icon-1"><img src="{% static 'media/images/1635633-194385ee.png' %}" alt=""></span>
                 <h3 class="u-custom-font u-font-arial u-text u-text-2">
-                  <a class="js-product-link u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://health-water.ru./#order"></a>Упаковка 24шт (1320р)
+                  <a class="js-product-link u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://health-water.ru./#order"></a>Упаковка 24шт (1320 р.)
                 </h3>
                 <p class="u-align-center u-text u-text-3">Внимание! В домах без лифта подъем на этаж платный.&nbsp;<br>Стоимость подъема одной упаковки 10 р за каждый этаж.
                 </p>
-                <a href="https://nicepage.com/website-builder" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-2">1,5</a>
-                <a href="https://nicepage.com/website-builder" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-3">0,5</a>
+                <a href="#" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-2 " onclick="changeContent('1.5', event)">1,5</a>
+                <a href="#" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-3" onclick="changeContent('0.5', event)">0,5</a>
                 <p class="u-text u-text-default u-text-4">Объём (л):</p>
                 <a href="https://nicepage.com/ru/c/galereya-html-shablony" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-4">.</a><span class="u-file-icon u-icon u-text-white u-icon-2"><img src="{% static 'media/images/5993960-4386bb15.png' %}" alt=""></span>
                 <p class="u-text u-text-body-alt-color u-text-default u-text-5">КУПИТЬ</p>
@@ -100,6 +101,23 @@
                 </ul>
               </div>
             </div>
+
+            <script>
+                function changeContent(option, event) {
+                  var imageElement = document.getElementById('Image_SELL');
+                  var titleElement = document.querySelector('.u-text-2');
+
+                  if (option === '1.5') {
+                    imageElement.src = "{% static 'media/images/Frame3.1.jpg' %}";
+                    titleElement.textContent = 'Упаковка 6 шт (480 р.)';
+                  } else if (option === '0.5') {
+                    imageElement.src = "{% static 'media/images/Frame2.1.jpg' %}";
+                    titleElement.textContent = 'Упаковка 24шт (1320 р.)';
+                  }
+                  event.preventDefault();
+                }
+            </script>
+
             <div class="u-container-style u-shape-rectangle u-tab-pane" id="tab-14b7" role="tabpanel" aria-labelledby="link-tab-14b7">
               <div class="u-container-layout u-container-layout-2">
                 <h3 class="u-custom-font u-font-arial u-text u-text-10">
