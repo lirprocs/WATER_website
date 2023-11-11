@@ -1,14 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="ru"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Женская юбка, Женская юбка">
     <meta name="description" content="">
     <title>Продукция</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="../../../../../../Documents/Nicepage%20Templates/HEALTH%20WATER/Продукция.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'css/products.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
     <meta name="generator" content="Nicepage 5.21.10, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
@@ -18,7 +18,7 @@
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "",
-		"logo": "images/af654cee-742c-48e1-bda9-c2dfbb899b15.PNG"
+		"logo": "{% static 'media/images/af654cee-742c-48e1-bda9-c2dfbb899b15.PNG' %}"
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Продукция">
@@ -26,7 +26,7 @@
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-path-to-root="./" data-include-products="true" class="u-body u-xl-mode" data-lang="ru"><header class="u-clearfix u-header u-white u-header" id="sec-c787"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1391" data-image-height="1387">
-          <img src="../../../../../../Documents/Nicepage%20Templates/HEALTH%20WATER/images/af654cee-742c-48e1-bda9-c2dfbb899b15.PNG" class="u-logo-image u-logo-image-1">
+          <img src="{% static 'media/images/af654cee-742c-48e1-bda9-c2dfbb899b15.PNG' %}" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse u-custom-font u-font-arial" style="font-size: 1rem; letter-spacing: 0px;">
@@ -37,25 +37,25 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-custom-font u-font-arial u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base" href="Главная.html" style="padding: 10px 20px;">Главная</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base" href="Заказать.html" style="padding: 10px 20px;">Продукция</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base" href="#" style="padding: 10px 20px;">О нас</a>
+            <ul class="u-custom-font u-font-arial u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base" href="{% url 'main' %}" style="padding: 10px 20px;">Главная</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base" href="{% url 'products' %}" style="padding: 10px 20px;">Продукция</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base" href="{% url 'about' %}" style="padding: 10px 20px;">О нас</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Главная.html">Главная</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Заказать.html">Продукция</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">О нас</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'main' %}">Главная</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'products' %}">Продукция</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'about' %}">О нас</a>
 </li></ul>
               </div>
             </div>
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <a href="https://nicepage.com/c/text-button-html-templates" class="u-active-none u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-1"> &nbsp;+7 (495) 760-57-38</a><span class="u-file-icon u-icon u-text-palette-1-base u-icon-1"><img src="../../../../../../Documents/Nicepage%20Templates/HEALTH%20WATER/images/126341-7352b378.png" alt=""></span><span class="u-file-icon u-icon u-icon-2"><img src="../../../../../../Documents/Nicepage%20Templates/HEALTH%20WATER/images/5968841.png" alt=""></span>
+        <a href="https://nicepage.com/c/text-button-html-templates" class="u-active-none u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-1"> &nbsp;+7 (495) 760-57-38</a><span class="u-file-icon u-icon u-text-palette-1-base u-icon-1"><img src="{% static 'media/images/126341-7352b378.png' %}" alt=""></span><span class="u-file-icon u-icon u-icon-2"><img src="{% static 'media/images/5968841.png' %}" alt=""></span>
         <a href="https://nicepage.com/c/text-button-html-templates" class="u-active-none u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-2">+7 (985) 760-57-38</a>
       </div></header>
     <section class="u-clearfix u-gradient u-section-1" id="sec-b7fc">
