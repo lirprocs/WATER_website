@@ -123,15 +123,30 @@
                 <h3 class="u-custom-font u-font-arial u-text u-text-10">
                   <br>150р (1 шт)
                 </h3>
-                <img class="u-image u-image-default u-image-2" src="{% static 'media/images/Frame4.jpg' %}" alt="" data-image-width="2185" data-image-height="1271"><span class="u-file-icon u-icon u-icon-rectangle u-text-custom-color-10 u-icon-3"><img src="{% static 'media/images/1635633-194385ee.png' %}" alt=""></span>
+                <img id="Image_SELL_OZON" class="u-image u-image-default u-image-2" src="{% static 'media/images/Frame4.jpg' %}" alt="" data-image-width="2185" data-image-height="1271"><span class="u-file-icon u-icon u-icon-rectangle u-text-custom-color-10 u-icon-3"><img src="{% static 'media/images/1635633-194385ee.png' %}" alt=""></span>
                 <p class="u-text u-text-default u-text-11">Заказывайте на OZON !</p>
-                <a href="https://nicepage.com/website-builder" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-5">1,5</a>
-                <a href="https://nicepage.com/website-builder" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-6">0,5</a>
+                <a href="https://nicepage.com/website-builder" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-5" onclick="changeContent2('1.5', event)">1,5</a>
+                <a href="https://nicepage.com/website-builder" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-6" onclick="changeContent2('0.5', event)">0,5</a>
                 <p class="u-text u-text-default u-text-12">Объём (л):</p>
                 <a href="https://nicepage.com/ru/c/galereya-html-shablony" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-7">.</a><span class="u-file-icon u-icon u-text-white u-icon-4"><img src="{% static 'media/images/5993960-4386bb15.png' %}" alt=""></span>
                 <p class="u-text u-text-body-alt-color u-text-default u-text-13">КУПИТЬ</p>
               </div>
             </div>
+            <script>
+                function changeContent2(option, event) {
+                  var imageElement = document.getElementById('Image_SELL_OZON');
+                  var titleElement = document.querySelector('.u-text-10');
+
+                  if (option === '1.5') {
+                    imageElement.src = "{% static 'media/images/20.PNG' %}";
+                    titleElement.textContent = '300 р. (1 шт)';
+                  } else if (option === '0.5') {
+                    imageElement.src = "{% static 'media/images/Frame4.jpg' %}";
+                    titleElement.textContent = '150 р. (1 шт)';
+                  }
+                  event.preventDefault();
+                }
+            </script>
           </div>
         </div>
       </div>
