@@ -141,9 +141,13 @@
                   if (option === '1.5') {
                     imageElement.src = "{% static 'media/images/Frame 5.jpg' %}";
                     titleElement.textContent = '300 р. (1 шт)';
+                    imageElement.style.cssText = "margin-top: 1.2px";
+                    titleElement.style.cssText = "margin-top: 1.2px";
                   } else if (option === '0.5') {
                     imageElement.src = "{% static 'media/images/Frame4.jpg' %}";
                     titleElement.textContent = '150 р. (1 шт)';
+                    imageElement.style.cssText = "margin-top: 1.2px";
+                    titleElement.style.cssText = "margin-top: 1.2px";
                   }
 
                   imageElement.style.marginTop = '-10px';
