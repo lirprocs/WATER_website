@@ -136,14 +136,18 @@
                 function changeContent2(option, event) {
                   var imageElement = document.getElementById('Image_SELL_OZON');
                   var titleElement = document.querySelector('.u-text-10');
+                  var containerLayout = document.querySelector('.u-container-layout-2');
 
                   if (option === '1.5') {
-                    imageElement.src = "{% static 'media/images/20.PNG' %}";
+                    imageElement.src = "{% static 'media/images/Frame 5.jpg' %}";
                     titleElement.textContent = '300 р. (1 шт)';
                   } else if (option === '0.5') {
                     imageElement.src = "{% static 'media/images/Frame4.jpg' %}";
                     titleElement.textContent = '150 р. (1 шт)';
                   }
+
+                  imageElement.style.marginTop = '-10px';
+
                   event.preventDefault();
                 }
             </script>
