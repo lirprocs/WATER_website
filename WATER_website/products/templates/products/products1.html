@@ -1,32 +1,31 @@
-<!DOCTYPE html>
+{% load static %}
 <html style="font-size: 16px;" lang="ru"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Женская юбка, Женская юбка">
     <meta name="description" content="">
     <title>Продукция</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Продукция.css" media="screen">
-    <script class="u-script" type="text/javascript" src="../../../../../../Documents/Nicepage%20Templates/HEALTH%20WATER/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="../../../../../../Documents/Nicepage%20Templates/HEALTH%20WATER/nicepage.js" defer=""></script>
+    <link rel="icon" href="{% static 'media/images/2ad6f96f-06ca-5451-e5e7-00ab06c825b4.PNG' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'css/products.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
     <meta name="generator" content="Nicepage 5.21.10, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    
-    
-    
+
+
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "",
-		"logo": "images/af654cee-742c-48e1-bda9-c2dfbb899b15.PNG"
+		"logo": "{% static 'media/images/af654cee-742c-48e1-bda9-c2dfbb899b15.PNG' %}"
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Продукция">
     <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-path-to-root="./" data-include-products="true" class="u-body u-xl-mode" data-lang="ru"><header class="u-clearfix u-header u-white u-header" id="sec-c787"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1391" data-image-height="1387">
-          <img src="../../../../../../Documents/Nicepage%20Templates/HEALTH%20WATER/images/af654cee-742c-48e1-bda9-c2dfbb899b15.PNG" class="u-logo-image u-logo-image-1">
+        <a href="/" class="u-image u-logo u-image-1" data-image-width="1391" data-image-height="1387">
+          <img src="{% static 'media/images/af654cee-742c-48e1-bda9-c2dfbb899b15.PNG' %}" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse u-custom-font u-font-arial" style="font-size: 1rem; letter-spacing: 0px;">
@@ -37,26 +36,40 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-custom-font u-font-arial u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base" href="../../../../../../Documents/Nicepage%20Templates/HEALTH%20WATER/Главная.html" style="padding: 10px 20px;">Главная</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base" href="Заказать.html" style="padding: 10px 20px;">Продукция</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base" href="#" style="padding: 10px 20px;">О нас</a>
+              <ul class="u-custom-font u-font-arial u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base" href="{% url 'main' %}" style="padding: 10px 20px;">Главная</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base" href="{% url 'products' %}" style="padding: 10px 20px;">Продукция</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-black u-text-hover-palette-1-base" href="{% url 'about' %}" style="padding: 10px 20px;">О нас</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../../../../../../Documents/Nicepage%20Templates/HEALTH%20WATER/Главная.html">Главная</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Заказать.html">Продукция</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">О нас</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'main' %}">Главная</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'products' %}">Продукция</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'about' %}">О нас</a>
 </li></ul>
               </div>
             </div>
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <a href="https://nicepage.com/c/text-button-html-templates" class="u-active-none u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-1"> &nbsp;+7 (495) 760-57-38</a><span class="u-file-icon u-icon u-text-palette-1-base u-icon-1"><img src="../../../../../../Documents/Nicepage%20Templates/HEALTH%20WATER/images/126341-7352b378.png" alt=""></span><span class="u-file-icon u-icon u-icon-2"><img src="../../../../../../Documents/Nicepage%20Templates/HEALTH%20WATER/images/5968841.png" alt=""></span>
-        <a href="https://nicepage.com/c/text-button-html-templates" class="u-active-none u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-2">+7 (985) 760-57-38</a>
+       <a href="#" class="u-active-none u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-1" onclick="copyPhoneNumber()"> &nbsp;<span id="phoneNumber">+7 (495) 760-57-38</span></a><span class="u-file-icon u-icon u-text-palette-1-base u-icon-1"><img src="{% static 'media/images/126341-7352b378.png' %}" alt=""></span><span class="u-file-icon u-icon u-icon-2"><img src="{% static 'media/images/5968841.png' %}" alt=""></span>
+        <script>
+        function copyPhoneNumber() {
+          var phoneNumber = document.getElementById('phoneNumber').innerText;
+          var tempInput = document.createElement('input');
+          tempInput.value = phoneNumber;
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          document.execCommand('copy');
+          document.body.removeChild(tempInput);
+
+          alert('Номер телефона скопирован: ' + phoneNumber);
+        }
+        </script>
+
+        <a href="https://wa.me/79857605738?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5,%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%B2%D0%BE%D0%B4%D1%8B" class="u-active-none u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-2">+7 (985) 760-57-38</a>
       </div></header>
     <section class="u-clearfix u-gradient u-section-1" id="sec-b7fc">
       <div class="u-clearfix u-sheet u-sheet-1">
@@ -67,20 +80,20 @@
               <a class="active u-active-palette-1-base u-button-style u-grey-10 u-tab-link u-text-active-white u-text-black u-tab-link-1" id="link-tab-0da5" href="#tab-0da5" role="tab" aria-controls="tab-0da5" aria-selected="true">Оптом</a>
             </li>
             <li class="u-tab-item" role="presentation">
-              <a class="u-active-palette-1-base u-button-style u-grey-10 u-tab-link u-text-active-white u-text-black u-tab-link-2" id="link-tab-14b7" href="#tab-14b7" role="tab" aria-controls="tab-14b7" aria-selected="false">В розницу</a>
+              <a class="u-active-palette-1-base u-button-style u-grey-10 u-tab-link u-text-active-white u-text-black u-tab-link-2" id="link-tab-14b7" href="#tab-14b7" role="tab" aria-controls="tab-14b7" aria-selected="false">OZON</a>
             </li>
           </ul>
           <div class="u-tab-content">
             <div class="u-container-style u-shape-rectangle u-tab-active u-tab-pane" id="tab-0da5" role="tabpanel" aria-labelledby="link-tab-0da5">
               <div class="u-container-layout u-container-layout-1">
-                <img class="u-image u-image-default u-image-1" src="../../../../../../Documents/Nicepage%20Templates/HEALTH%20WATER/images/Frame2.1.jpg" alt="" data-image-width="2209" data-image-height="1271"><span class="u-file-icon u-icon u-icon-rectangle u-text-custom-color-10 u-icon-1"><img src="../../../../../../Documents/Nicepage%20Templates/HEALTH%20WATER/images/1635633-194385ee.png" alt=""></span>
+                <img id="Image_SELL" class="u-image u-image-default u-image-1" src="{% static 'media/images/Frame2.1.jpg' %}" alt="" data-image-width="2209" data-image-height="1271"><span class="u-file-icon u-icon u-icon-rectangle u-text-custom-color-10 u-icon-1"><img src="{% static 'media/images/1635633-194385ee.png' %}" alt=""></span>
                 <h3 class="u-custom-font u-font-arial u-text u-text-2">
-                  <a class="js-product-link u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://health-water.ru./#order"></a>Упаковка 24шт (1320р)
+                  <a class="js-product-link u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://health-water.ru./#order"></a>Упаковка 24шт (1320 р.)
                 </h3>
-                <p class="u-align-center u-text u-text-3">Внимание! В домах без лифта подъем на этаж платный.&nbsp;<br>Стоимость подъема одной упаковки 10 р за каждый этаж.
+                  <p id="Amount" class="u-align-center u-text u-text-3">Внимание! В домах без лифта подъем на этаж платный.&nbsp;<br>Стоимость подъема одной упаковки 10 р за каждый этаж. <br><b>Минимальный заказ от 4 упаковок.</b>
                 </p>
-                <a href="https://nicepage.com/website-builder" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-2">1,5</a>
-                <a href="https://nicepage.com/website-builder" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-3">0,5</a>
+                <a href="#" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-2 " onclick="changeContent('1.5', event)">1,5</a>
+                <a href="#" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-3" onclick="changeContent('0.5', event)">0,5</a>
                 <p class="u-text u-text-default u-text-4">Объём (л):</p>
                 <a href="https://nicepage.com/joomla-templates" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-4">КУПИТЬ</a>
                 <h3 class="u-custom-font u-font-arial u-text u-text-5"> Доставка в пределах МКАД:</h3>
@@ -100,34 +113,68 @@
                 </ul>
               </div>
             </div>
-            <div class="u-align-left u-container-style u-shape-rectangle u-tab-pane" id="tab-14b7" role="tabpanel" aria-labelledby="link-tab-14b7">
+
+            <script>
+                function changeContent(option, event) {
+                  var imageElement = document.getElementById('Image_SELL');
+                  var titleElement = document.querySelector('.u-text-2');
+                  var colElement = document.getElementById('Amount')
+
+                  if (option === '1.5') {
+                    imageElement.src = "{% static 'media/images/Frame3.1.jpg' %}";
+                    titleElement.textContent = 'Упаковка 6 шт (480 р.)';
+                    colElement.innerHTML= 'Внимание! В домах без лифта подъем на этаж платный.&nbsp;<br>Стоимость подъема одной упаковки 10 р за каждый этаж. <br><b>Минимальный заказ от 10 упаковок.</b>'
+
+                  } else if (option === '0.5') {
+                    imageElement.src = "{% static 'media/images/Frame2.1.jpg' %}";
+                    titleElement.textContent = 'Упаковка 24шт (1320 р.)';
+                    colElement.innerHTML = 'Внимание! В домах без лифта подъем на этаж платный.&nbsp;<br>Стоимость подъема одной упаковки 10 р за каждый этаж. <br><b>Минимальный заказ от 4 упаковок.</b>'
+                  }
+                  event.preventDefault();
+                }
+            </script>
+
+            <div class="u-container-style u-shape-rectangle u-tab-pane" id="tab-14b7" role="tabpanel" aria-labelledby="link-tab-14b7">
               <div class="u-container-layout u-container-layout-2">
-                <p class="u-text u-text-9">Для преобретения данного товара в меньшем количестве воспользуйтесь платформой OZON для оформления заказа.</p>
-                <a href="https://nicepage.com/joomla-templates" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-5">ПЕРЕЙТИ НА OZON</a>
+                <img id="Image_SELL_OZON" class="u-image u-image-default u-image-2" src="{% static 'media/images/Frame4.jpg' %}" alt="" data-image-width="2185" data-image-height="1271"><span class="u-file-icon u-icon u-icon-rectangle u-text-custom-color-11 u-icon-2"><img src="{% static 'media/images/1635633-194385ee.png' %}" alt=""></span>
+                <h3 class="u-text u-text-default u-text-9">150 р. (1 шт)</h3>
+                <p class="u-align-center u-text u-text-10">Для заказа данной продукции меньшего количества,&nbsp;<br>пользуйтесь платформой OZON!
+                </p>
+                <a href="#" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-5"  onclick="changeContent2('1.5', event)">1,5</a>
+                <a href="#" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-6"  onclick="changeContent2('0.5', event)">0,5</a>
+                <p class="u-text u-text-default u-text-11">Объём (л):</p>
+                <a href="https://nicepage.com/joomla-templates" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-7">КУПИТЬ</a>
               </div>
             </div>
+            <script>
+                function changeContent2(option, event) {
+                  var imageElement = document.getElementById('Image_SELL_OZON');
+                  var titleElement = document.querySelector('.u-text-9');
+                  var containerLayout = document.querySelector('.u-container-layout-2');
+
+                  if (option === '1.5') {
+                    imageElement.src = "{% static 'media/images/Frame 5.jpg' %}";
+                    titleElement.textContent = '300 р. (1 шт)';
+                  } else if (option === '0.5') {
+                    imageElement.src = "{% static 'media/images/Frame4.jpg' %}";
+                    titleElement.textContent = '150 р. (1 шт)';
+                  }
+
+                  event.preventDefault();
+                }
+            </script>
           </div>
         </div>
       </div>
     </section>
-    
-    
-    
-    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-c943"><div class="u-clearfix u-sheet u-valign-middle-xs u-sheet-1">
+
+
+
+        <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-c943"><div class="u-clearfix u-sheet u-valign-middle-xs u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1"> ВАЖНО! Остерегайтесь подделок!<br>На этикетке каждой бутылки ФПВ имеется зарегистрированный товарный знак.
         </p>
-        <a href="https://nicepage.com/c/text-button-html-templates" class="u-active-none u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-1"> &nbsp;+7 (495) 760-57-38</a><span class="u-file-icon u-icon u-text-white u-icon-1"><img src="../../../../../../Documents/Nicepage%20Templates/HEALTH%20WATER/images/126341-bffbd09c.png" alt=""></span>
-      </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
-    </section>
+        <a class="u-active-none u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-1"> &nbsp;+7 (495) 760-57-38</a><span class="u-file-icon u-icon u-text-white u-icon-1"><img src="{% static 'media/images/126341-bffbd09c.png' %}" alt=""></span>
+      </div>
+    </footer>
   
 </body></html>
