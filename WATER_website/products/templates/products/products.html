@@ -80,7 +80,7 @@
               <a class="active u-active-palette-1-base u-button-style u-grey-10 u-tab-link u-text-active-white u-text-black u-tab-link-1" id="link-tab-0da5" href="#tab-0da5" role="tab" aria-controls="tab-0da5" aria-selected="true">Оптом</a>
             </li>
             <li class="u-tab-item" role="presentation">
-              <a class="u-active-palette-1-base u-button-style u-grey-10 u-tab-link u-text-active-white u-text-black u-tab-link-2" id="link-tab-14b7" href="#tab-14b7" role="tab" aria-controls="tab-14b7" aria-selected="false">В розницу</a>
+              <a class="u-active-palette-1-base u-button-style u-grey-10 u-tab-link u-text-active-white u-text-black u-tab-link-2" id="link-tab-14b7" href="#tab-14b7" role="tab" aria-controls="tab-14b7" aria-selected="false">OZON</a>
             </li>
           </ul>
           <div class="u-tab-content">
@@ -90,7 +90,7 @@
                 <h3 class="u-custom-font u-font-arial u-text u-text-2">
                   <a class="js-product-link u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://health-water.ru./#order"></a>Упаковка 24шт (1320 р.)
                 </h3>
-                <p class="u-align-center u-text u-text-3">Внимание! В домах без лифта подъем на этаж платный.&nbsp;<br>Стоимость подъема одной упаковки 10 р за каждый этаж.
+                  <p id="Amount" class="u-align-center u-text u-text-3">Внимание! В домах без лифта подъем на этаж платный.&nbsp;<br>Стоимость подъема одной упаковки 10 р за каждый этаж. <br><b>Минимальный заказ от 4 упаковок.</b>
                 </p>
                 <a href="#" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-2 " onclick="changeContent('1.5', event)">1,5</a>
                 <a href="#" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-3" onclick="changeContent('0.5', event)">0,5</a>
@@ -118,13 +118,17 @@
                 function changeContent(option, event) {
                   var imageElement = document.getElementById('Image_SELL');
                   var titleElement = document.querySelector('.u-text-2');
+                  var colElement = document.getElementById('Amount')
 
                   if (option === '1.5') {
                     imageElement.src = "{% static 'media/images/Frame3.1.jpg' %}";
                     titleElement.textContent = 'Упаковка 6 шт (480 р.)';
+                    colElement.innerHTML= 'Внимание! В домах без лифта подъем на этаж платный.&nbsp;<br>Стоимость подъема одной упаковки 10 р за каждый этаж. <br><b>Минимальный заказ от 10 упаковок.</b>'
+
                   } else if (option === '0.5') {
                     imageElement.src = "{% static 'media/images/Frame2.1.jpg' %}";
                     titleElement.textContent = 'Упаковка 24шт (1320 р.)';
+                    colElement.innerHTML = 'Внимание! В домах без лифта подъем на этаж платный.&nbsp;<br>Стоимость подъема одной упаковки 10 р за каждый этаж. <br><b>Минимальный заказ от 4 упаковок.</b>'
                   }
                   event.preventDefault();
                 }

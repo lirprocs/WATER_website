@@ -128,55 +128,18 @@
   padding: 0;
 }
 
-.u-section-1 .u-image-2 {
-  width: 570px;
-  height: 579px;
-  margin: 25px auto 0 0;
-}
-
-.u-section-1 .u-icon-2 {
-  width: 84px;
-  height: 84px;
-  margin: -331px auto 0 512px;
-  padding: 11px;
-}
-
 .u-section-1 .u-text-9 {
-  margin: -287px 197px 0 auto;
-}
-
-.u-section-1 .u-text-10 {
-  margin: 74px 52px 0 621px;
+  font-size: 1.5rem;
+  margin: 83px 6px 0 14px;
 }
 
 .u-section-1 .u-btn-5 {
-  background-image: none;
-  border-style: solid;
-  font-size: 1.5rem;
-  margin: 76px auto 0 905px;
-  padding: 13px 17px 13px 16px;
-}
-
-.u-section-1 .u-btn-6 {
-  background-image: none;
-  border-style: solid;
-  font-size: 1.5rem;
-  margin: -68px auto 0 817px;
-  padding: 13px 17px 13px 16px;
-}
-
-.u-section-1 .u-text-11 {
-  font-size: 1.5rem;
-  margin: -53px auto 0 680px;
-}
-
-.u-section-1 .u-btn-7 {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.875rem;
   letter-spacing: 1px;
-  margin: 77px 217px 0 auto;
-  padding: 13px 37px 14px 36px;
+  margin: 55px auto 0 14px;
+  padding: 22px 37px 23px 36px;
 }
 
 @media (max-width: 1199px) {
@@ -241,34 +204,14 @@
     margin-right: 0;
   }
 
-  .u-section-1 .u-image-2 {
-    width: 470px;
-    height: 477px;
-  }
-
-  .u-section-1 .u-icon-2 {
-    margin-top: -229px;
-    margin-left: 422px;
-  }
-
-  .u-section-1 .u-text-10 {
-    margin-left: 473px;
+  .u-section-1 .u-text-9 {
+    margin-right: 52px;
+    margin-left: 0;
+    width: 467px;
   }
 
   .u-section-1 .u-btn-5 {
-    margin-left: 705px;
-  }
-
-  .u-section-1 .u-btn-6 {
-    margin-left: 617px;
-  }
-
-  .u-section-1 .u-text-11 {
-    margin-left: 561px;
-  }
-
-  .u-section-1 .u-btn-7 {
-    margin-right: 17px;
+    margin-left: 0;
   }
 }
 
@@ -322,36 +265,6 @@
 
   .u-section-1 .u-text-7 {
     margin-right: 233px;
-  }
-
-  .u-section-1 .u-image-2 {
-    width: 360px;
-    height: 365px;
-  }
-
-  .u-section-1 .u-icon-2 {
-    margin-top: -117px;
-    margin-left: 323px;
-  }
-
-  .u-section-1 .u-text-10 {
-    margin-left: 253px;
-  }
-
-  .u-section-1 .u-btn-5 {
-    margin-left: 485px;
-  }
-
-  .u-section-1 .u-btn-6 {
-    margin-left: 397px;
-  }
-
-  .u-section-1 .u-text-11 {
-    margin-left: 430px;
-  }
-
-  .u-section-1 .u-btn-7 {
-    margin-right: 0;
   }
 }
 
@@ -426,40 +339,13 @@
     font-size: 1rem;
   }
 
-  .u-section-1 .u-image-2 {
-    width: 527px;
-    height: 535px;
-    margin-top: 30px;
-    margin-right: 0;
-  }
-
-  .u-section-1 .u-icon-2 {
-    margin-top: -277px;
-    margin-left: 242px;
-  }
-
   .u-section-1 .u-text-9 {
-    margin-top: 36px;
-    margin-right: 148px;
-  }
-
-  .u-section-1 .u-text-10 {
-    margin-top: 37px;
-    margin-left: 73px;
+    margin-top: 408px;
+    font-size: 1rem;
   }
 
   .u-section-1 .u-btn-5 {
-    margin-top: 52px;
-    margin-left: 305px;
-  }
-
-  .u-section-1 .u-btn-6 {
-    margin-left: 217px;
-  }
-
-  .u-section-1 .u-text-11 {
-    font-size: 1rem;
-    margin-left: 323px;
+    margin-top: 67px;
   }
 }
 
@@ -564,59 +450,15 @@
     width: auto;
   }
 
-  .u-section-1 .u-image-2 {
-    width: 149px;
-    height: 182px;
-    margin-right: auto;
-    margin-left: 6px;
-  }
-
-  .u-section-1 .u-icon-2 {
-    width: 41px;
-    height: 41px;
-    margin-top: -111px;
-    margin-left: 126px;
-    padding: 7px;
-  }
-
   .u-section-1 .u-text-9 {
     width: auto;
-    margin-top: -136px;
-    margin-right: 37px;
-  }
-
-  .u-section-1 .u-text-10 {
-    width: auto;
-    margin-top: 188px;
-    margin-left: 0;
+    margin-top: 26px;
     margin-right: 0;
   }
 
   .u-section-1 .u-btn-5 {
-    font-size: 1rem;
-    margin-top: -223px;
-    margin-right: 52px;
+    margin-top: 26px;
     margin-left: auto;
-    padding: 5px 6px;
-  }
-
-  .u-section-1 .u-btn-6 {
-    font-size: 1rem;
-    margin-top: -39px;
-    margin-right: 117px;
-    margin-left: auto;
-    padding: 4px 6px 5px;
-  }
-
-  .u-section-1 .u-text-11 {
-    width: auto;
-    margin-top: -73px;
-    margin-right: 63px;
-    margin-left: auto;
-  }
-
-  .u-section-1 .u-btn-7 {
-    margin-top: 65px;
-    margin-right: 25px;
+    padding: 14px 15px 14px 14px;
   }
 }
