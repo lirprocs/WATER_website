@@ -15,8 +15,8 @@
 
 .u-section-1 .u-tabs-1 {
   min-height: 722px;
-  margin-top: 62px;
-  margin-bottom: 40px;
+  margin-top: 55px;
+  margin-bottom: 47px;
   height: auto;
 }
 
@@ -205,9 +205,8 @@
   }
 
   .u-section-1 .u-text-9 {
-    margin-right: 52px;
+    margin-right: 0;
     margin-left: 0;
-    width: 467px;
   }
 
   .u-section-1 .u-btn-5 {
@@ -270,8 +269,8 @@
 
 @media (max-width: 767px) {
   .u-section-1 .u-text-1 {
-    width: 540px;
     font-size: 1.875rem;
+    width: 540px;
   }
 
   .u-section-1 .u-tab-link-1 {
@@ -340,32 +339,14 @@
   }
 
   .u-section-1 .u-text-9 {
-    margin-top: 408px;
     font-size: 1rem;
-  }
-
-  .u-section-1 .u-btn-5 {
-    margin-top: 67px;
   }
 }
 
 @media (max-width: 575px) {
-  .u-section-1 .u-sheet-1 {
-    min-height: 563px;
-  }
-
   .u-section-1 .u-text-1 {
     font-size: 1.25rem;
-    width: auto;
-    margin-top: 34px;
-    margin-right: -11px;
-    margin-left: 0;
-  }
-
-  .u-section-1 .u-tabs-1 {
-    min-height: 370px;
-    margin-top: 52px;
-    margin-bottom: 59px;
+    width: 340px;
   }
 
   .u-section-1 .u-container-layout-1 {
@@ -450,15 +431,7 @@
     width: auto;
   }
 
-  .u-section-1 .u-text-9 {
-    width: auto;
-    margin-top: 26px;
-    margin-right: 0;
-  }
-
   .u-section-1 .u-btn-5 {
-    margin-top: 26px;
-    margin-left: auto;
     padding: 14px 15px 14px 14px;
   }
 }
