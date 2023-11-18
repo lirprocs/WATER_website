@@ -54,8 +54,6 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-      <a href="#sec-0304" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-dialog-link u-none u-radius-50 u-btn-99"><span class="u-icon u-text-palette-1-base u-icon-1"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><circle cx="181.333" cy="437.333" r="53.333"></circle><path d="M509.867,89.6c-2.133-2.133-4.267-4.267-8.533-4.267H96L85.333,29.867c-2.133-4.267-6.4-8.533-10.667-8.533h-64 C4.267,21.333,0,25.6,0,32s4.267,10.667,10.667,10.667h55.467l51.2,260.267c8.533,34.133,38.4,59.733,74.667,59.733h245.333 c6.4,0,10.667-4.267,10.667-10.667c0-6.4-4.267-10.667-10.667-10.667H192c-17.067,0-34.133-8.533-42.667-23.467L460.8,275.2 c4.267,0,8.533-4.267,8.533-8.533L512,96C512,96,512,91.733,509.867,89.6z"></path><circle cx="394.667" cy="437.333" r="53.333"></circle></svg></span>
-      </a>
        <a href="#" class="u-active-none u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-1" onclick="copyPhoneNumber()"> &nbsp;<span id="phoneNumber">+7 (495) 760-57-38</span></a><span class="u-file-icon u-icon u-text-palette-1-base u-icon-1"><img src="{% static 'media/images/126341-7352b378.png' %}" alt=""></span><span class="u-file-icon u-icon u-icon-2"><img src="{% static 'media/images/5968841.png' %}" alt=""></span>
         <script>
         function copyPhoneNumber() {
@@ -99,7 +97,7 @@
                 <a href="https://nicepage.com/website-builder" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-2" onclick="changeContent('1.5', event)">1,5</a>
                 <a href="https://nicepage.com/website-builder" class="u-active-custom-color-3 u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-radius-50 u-text-active-white u-text-custom-color-3 u-text-hover-white u-white u-btn-3" onclick="changeContent('0.5', event)">0,5</a>
                 <p class="u-text u-text-default u-text-4">Объём (л):</p>
-                <a href="https://nicepage.com/joomla-templates" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-4">КУПИТЬ</a>
+                <a href="#sec-0304" class="u-btn u-btn-round u-button-style u-dialog-link u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-4">КУПИТЬ</a>
                 <h3 class="u-custom-font u-font-arial u-text u-text-5"> Доставка в пределах МКАД:</h3>
                 <ul class="u-custom-font u-font-arial u-text u-text-6">
                   <li>При сумме заказа от 4 800 руб. - бесплатно в пределах МКАД<br>
@@ -158,21 +156,21 @@
           <div class="u-border-2 u-border-grey-75 u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
             <div class="u-container-layout u-container-layout-2">
               <p class="u-text u-text-default u-text-2">Упаковка&nbsp;24 шт. по 0.5 л.</p>
-              <img class="u-image u-image-default u-image-1" src="../../../../../../Documents/Nicepage%20Templates/Заказ2/images/IMG_8918.png" alt="" data-image-width="1680" data-image-height="1260">
-              <a href="https://nicepage.com/ru/html-shablony" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-btn-1">+</a>
-              <h3 class="u-text u-text-3" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">99</h3>
-              <a href="https://nicepage.com/ru/html-shablony" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-btn-2">-</a>
+              <img class="u-image u-image-default u-image-1" src="{% static 'media/images/11.PNG' %}" alt="" data-image-width="1680" data-image-height="1260">
+              <button id="+_1" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-btn-1" >+</button>
+              <h3 id="KOL 0,5" class="u-text u-text-3" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">4</h3>
+              <button id="-_1" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-btn-2">-</button>
               <p class="u-text u-text-4">1320 р.</p>
-              <a href="https://nicepage.com/ru/html-shablony" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-text-black u-btn-3">X</a>
+              <a id="X_1" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-text-black u-btn-3">X</a>
               <p class="u-text u-text-default u-text-5"> Упаковка 6 шт. по 1.5 л.</p>
-              <img class="u-image u-image-contain u-image-default u-image-2" src="../../../../../../Documents/Nicepage%20Templates/Заказ2/images/IMG_8879.png" alt="" data-image-width="1680" data-image-height="1260">
-              <a href="https://nicepage.com/ru/html-shablony" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-btn-4">+</a>
-              <h3 class="u-text u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">99</h3>
-              <a href="https://nicepage.com/ru/html-shablony" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-btn-5">-</a>
-              <a href="https://nicepage.com/ru/html-shablony" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-btn-6">X</a>
+              <img class="u-image u-image-contain u-image-default u-image-2" src="{% static 'media/images/12.PNG' %}" alt="" data-image-width="1680" data-image-height="1260">
+              <a id="+_2" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-btn-4">+</a>
+              <h3 id="KOL 1,5" class="u-text u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">10</h3>
+              <a id="-_2" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-btn-5">-</a>
+              <a id="X_2" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-btn-6">X</a>
               <p class="u-text u-text-7">480 р.</p>
               <h3 class="u-text u-text-8"> Минимальный заказ:&nbsp;4 800 р.</h3>
-              <h3 class="u-text u-text-9"> Сумма:&nbsp;1 800 р.</h3>
+              <h3 id="ITOG" class="u-text u-text-9"> Сумма:&nbsp;1 800 р.</h3>
             </div>
           </div>
           <p class="u-text u-text-default u-text-10">Доставка в пределах МКАД:<br>⦁ При сумме заказа от 4 800 руб. - бесплатно в пределах МКАД<br>⦁ При сумме заказа до 4 800 руб. - только самовывоз по адресу: ул. Дмитрия Ульянова, дом 31 (по предварительному согласованию)<br>Доставка за МКАД:<br>⦁ До 5 км. от МКАД. Минимальная стоимость заказа 4 800 руб. Доставка – бесплатно.<br>⦁ От 5 до 20 км. от МКАД. Минимальная стоимость заказа- 9 600 руб. Доставка – бесплатно.<br>⦁ От 20 до 30 км. от МКАД. Минимальная стоимость заказа – 14 400 руб. Доставка – 800 руб.
@@ -211,19 +209,102 @@
           </div>
         </div><button class="u-dialog-close-button u-icon u-text-grey-40 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-efe9"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-efe9"><rect x="7" y="0" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.3138 8.0002)" width="2" height="16"></rect><rect x="0" y="7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.3138 8.0002)" width="16" height="2"></rect></svg></button>
       </div>
+        <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                // Получаем элементы для управления
+                var quantity1 = document.getElementById("KOL 0,5"); // Количество первого товара
+                var quantity2 = document.getElementById("KOL 1,5"); // Количество второго товара
+                var price1 = 1320; // Цена первого товара
+                var price2 = 480; // Цена второго товара
+                var totalElement = document.getElementById("ITOG"); // Общая сумма
+
+                // Функция для обновления суммы
+                function updateTotal() {
+                  var total = parseInt(quantity1.textContent) * price1 + parseInt(quantity2.textContent) * price2;
+                  totalElement.textContent = 'Сумма: ' + total + ' р.';
+                }
+
+                // Обработчик для кнопки "+", товар 1
+                document.getElementById('+_1').addEventListener('click', function(event) {
+                  event.preventDefault();
+                  var currentQuantity = parseInt(quantity1.textContent);
+                  if(currentQuantity < 4) { // Минимальное
+                    quantity1.textContent = 4;
+                    updateTotal();
+                  }else if (currentQuantity < 100) { // Максимальное количество
+                    quantity1.textContent = currentQuantity + 1;
+                    updateTotal();
+                  }
+                });
+
+                // Обработчик для кнопки "-", товар 1
+                document.getElementById('-_1').addEventListener('click', function(event) {
+                  event.preventDefault();
+                  var currentQuantity = parseInt(quantity1.textContent);
+                  if (currentQuantity > 4) { // Минимальное количество
+                    quantity1.textContent = currentQuantity - 1;
+                    updateTotal();
+                  }
+                });
+
+                // Обработчик для кнопки "+", товар 2
+                document.getElementById('+_2').addEventListener('click', function(event) {
+                  event.preventDefault();
+                  var currentQuantity = parseInt(quantity2.textContent);
+                  if(currentQuantity < 10) { // Минимальное
+                    quantity2.textContent = 10;
+                    updateTotal();
+                  }else if (currentQuantity < 100) { // Максимальное количество
+                      quantity2.textContent = currentQuantity + 1;
+                      updateTotal();
+                  }
+                });
+
+                // Обработчик для кнопки "-", товар 2
+                document.getElementById('-_2').addEventListener('click', function(event) {
+                  event.preventDefault();
+                  var currentQuantity = parseInt(quantity2.textContent);
+                  if (currentQuantity < 10) { // Минимальное количество
+                    quantity2.textContent = currentQuantity - 1;
+                    updateTotal();
+                  }
+                });
+
+                // Обработчик для кнопки "X1", удаление товара
+                document.getElementById('X_1').addEventListener('click', function(event) {
+                  event.preventDefault();
+                  quantity1.textContent = '0'; // Восстанавливаем минимальное количество товара 1
+                  updateTotal();
+                });
+
+                // Обработчик для кнопки "X2", удаление товара
+                document.getElementById('X_2').addEventListener('click', function(event) {
+                  event.preventDefault();
+                  quantity2.textContent = '0'; // Восстанавливаем минимальное количество товара 2
+                  updateTotal();
+                });
+
+                // Обновляем сумму при загрузке страницы
+                updateTotal();
+              });
+        </script>
     </section>
+
+
   <style>
 .u-dialog-section-5 .u-dialog-1 {
-  width: 800px;
-  min-height: 1368px;
+  width: 810px;
+  min-height: 700px;
+  max-height: 800px;
   height: 500px;
-  margin: 114px auto 60px;
+  margin: 50px auto 60px;
   overflow-y: auto !important;
+  overflow-y: auto;
   display: block;
 }
 
 .u-dialog-section-5 .u-container-layout-1 {
-  padding: 30px;
+  padding: 30px 30px 16px;
 }
 
 .u-dialog-section-5 .u-text-1 {
