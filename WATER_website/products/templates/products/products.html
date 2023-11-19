@@ -290,18 +290,27 @@
               updateTotal();
             });
         </script>
-<!--        <script>-->
-<!--            var orderButton = document.getElementById("Order");-->
-<!--            var successMessage = document.getElementById('Send');-->
+        <script>
+            var orderButton = document.getElementById("Order");
+            var successMessage = document.getElementById('Send');
 
-<!--            orderButton.addEventListener('click', function() {-->
-<!--                successMessage.style.display = 'block';-->
 
-<!--                setTimeout(function() {-->
-<!--                    successMessage.style.display = 'none';-->
-<!--                    }, 2000);-->
-<!--            });-->
-<!--        </script>-->
+            orderButton.addEventListener('click', function() {
+                const nickname = document.getElementById('nickname').value;
+                const phone = document.getElementById('phone').value;
+                const adress = document.getElementById('adress').value;
+
+                if (nickname.trim() === '' || phone.trim() === '' || adress.trim() === '') {
+                  document.getElementById("Wasnt sent").style.display = 'block';
+                  return;
+                }
+                successMessage.style.display = 'block';
+
+                setTimeout(function() {
+                    successMessage.style.display = 'none';
+                    }, 2000);
+            });
+        </script>
         <script>
             const sendButton = document.getElementById('Order');
             function sendMessage(event) {
@@ -309,7 +318,7 @@
             }
 
         </script>
-        <script src="static/js/script.js"></script>
+<!--        <script src="static/js/script.js"></script>-->
       </div>
     </section>
 
