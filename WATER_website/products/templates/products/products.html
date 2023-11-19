@@ -198,11 +198,11 @@
                 <label for="checkbox-f415" class="u-field-label">Я принимаю условия пользовательского соглашения</label>
               </div>
               <div class="u-align-left u-form-group u-form-submit">
-                <div id="Order" onclick="sendMessage(event)" class="u-black u-border-none u-btn u-btn-submit u-button-style u-btn-7">ЗАКАЗАТЬ</div>
+                <div id="Order" class="u-black u-border-none u-btn u-btn-submit u-button-style u-btn-7">ЗАКАЗАТЬ</div>
                 <input type="submit" value="submit" class="u-form-control-hidden">
               </div>
-              <div id="Send" class=" u-form-send-message u-form-send-success"> Спасибо! Ваше сообщение отправлено. </div>
-              <div id="Wasnt sent" class="u-form-send-error u-form-send-message"> Отправка не удалась. Пожалуйста, исправьте ошибки и попробуйте еще раз. </div>
+              <div id="Send" class="my-custom-success-class"> Спасибо! Ваше сообщение отправлено. </div>
+              <div id="Wasnt sent" class="my-custom-error-class"> Отправка не удалась. Пожалуйста, исправьте ошибки и попробуйте еще раз. </div>
               <input type="hidden" value="" name="recaptchaResponse">
               <input type="hidden" name="formServices" value="c13724d9-c88a-0e14-635f-c31049ec7e8d">
             </form>
@@ -293,6 +293,7 @@
         <script>
             var orderButton = document.getElementById("Order");
             var successMessage = document.getElementById('Send');
+            var errorMessage = document.getElementById('Wasnt sent');
 
 
             orderButton.addEventListener('click', function() {
@@ -301,23 +302,25 @@
                 const adress = document.getElementById('adress').value;
 
                 if (nickname.trim() === '' || phone.trim() === '' || adress.trim() === '') {
-                  document.getElementById("Wasnt sent").style.display = 'block';
-                  return;
-                }
-                successMessage.style.display = 'block';
-
-                setTimeout(function() {
+                  errorMessage.style.display = 'block';
+                  setTimeout(function() {
+                    errorMessage.style.display = 'none';
+                    }, 3000);
+                } else {
+                    successMessage.style.display = 'block';
+                    setTimeout(function() {
                     successMessage.style.display = 'none';
-                    }, 2000);
+                    }, 3000);
+                }
             });
         </script>
-        <script>
-            const sendButton = document.getElementById('Order');
-            function sendMessage(event) {
-                event.preventDefault();
-            }
+<!--        <script>-->
+<!--            const sendButton = document.getElementById('Order');-->
+<!--            function sendMessage(event) {-->
+<!--                event.preventDefault();-->
+<!--            }-->
 
-        </script>
+<!--        </script>-->
 <!--        <script src="static/js/script.js"></script>-->
       </div>
     </section>
@@ -341,6 +344,24 @@
 
 .u-dialog-section-5 .u-text-1 {
   margin: 1px auto 0;
+}
+
+.my-custom-success-class {
+  color: green; /* Цвет текста /
+  background-color: #eafbea; / Цвет фона /
+  border: 1px solid #4caf50; / Обводка /
+  padding: 10px; / Внутренний отступ /
+  margin-bottom: 10px; / Внешний отступ снизу */
+  display: none;
+}
+
+.my-custom-error-class {
+  color: red; /* Цвет текста /
+  background-color: #eafbea; / Цвет фона /
+  border: 1px solid #4caf50; / Обводка /
+  padding: 10px; / Внутренний отступ /
+  margin-bottom: 10px; / Внешний отступ снизу */
+  display: none;
 }
 
 .u-dialog-section-5 .u-group-1 {
