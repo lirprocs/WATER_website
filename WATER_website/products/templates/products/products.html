@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <title>Продукция</title>
+    {% csrf_token %}
     <link rel="icon" href="{% static 'media/images/2ad6f96f-06ca-5451-e5e7-00ab06c825b4.PNG' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
 <link rel="stylesheet" href="{% static 'css/products1.css' %}" media="screen">
@@ -198,7 +199,7 @@
                 <label for="checkbox-f415" class="u-field-label">Я принимаю условия пользовательского соглашения</label>
               </div>
               <div class="u-align-left u-form-group u-form-submit">
-                <div id="Order" class="u-black u-border-none u-btn u-btn-submit u-button-style u-btn-7">ЗАКАЗАТЬ</div>
+                <div id="Order" onclick="sendMessage(event)" class="u-black u-border-none u-btn u-btn-submit u-button-style u-btn-7">ЗАКАЗАТЬ</div>
                 <input type="submit" value="submit" class="u-form-control-hidden">
               </div>
               <div id="Send" class="my-custom-success-class"> Спасибо! Ваше сообщение отправлено. </div>
@@ -314,14 +315,14 @@
                 }
             });
         </script>
-<!--        <script>-->
-<!--            const sendButton = document.getElementById('Order');-->
-<!--            function sendMessage(event) {-->
-<!--                event.preventDefault();-->
-<!--            }-->
+        <script>
+            const sendButton = document.getElementById('Order');
+            function sendMessage(event) {
+                event.preventDefault();
+            }
 
-<!--        </script>-->
-<!--        <script src="static/js/script.js"></script>-->
+        </script>
+        <script src="static/js/script.js"></script>
       </div>
     </section>
 
