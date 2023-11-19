@@ -1,6 +1,14 @@
 function sendMessage(event) {
     event.preventDefault();
 
+    function getCSRFToken() {
+      const cookieValue = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('csrftoken='))
+        .split('=')[1];
+      return cookieValue;
+    }
+
     const nickname = document.getElementById('nickname').value;
     const phone = document.getElementById('phone').value;
     const adress = document.getElementById('adress').value;
@@ -8,6 +16,10 @@ function sendMessage(event) {
     const xhr = new XMLHttpRequest();
 
     xhr.open('POST', 'products/sendMessage', true);
+
+    const csrf_token = getCSRFToken();
+
+    xhr.setRequestHeader('X-CSRFToken', csrf_token);
 
     xhr.setRequestHeader('Content-Type', 'application/json');
 
