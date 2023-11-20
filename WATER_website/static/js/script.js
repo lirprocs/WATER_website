@@ -48,7 +48,7 @@ function sendMessage(event) {
       if (xhr.status === 200) {
          document.getElementById("Send").style.display = 'block';
          setTimeout(function() {
-         document.getElementById("Wasnt sent").style.display = 'none';
+         document.getElementById("Send").style.display = 'none';
       }, 3000);
       }  else {
          document.getElementById("Wasnt sent").style.display = 'block';
