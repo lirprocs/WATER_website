@@ -13,6 +13,10 @@ function sendMessage(event) {
     const phone = document.getElementById('phone').value;
     const adress = document.getElementById('adress').value;
 
+    if (nickname.trim() === '' || phone.trim() === '' || adress.trim() === '') {
+      document.getElementById("Wasnt sent").style.display = 'block';
+    }
+
     const xhr = new XMLHttpRequest();
 
     xhr.open('POST', 'products/sendMessage', true);

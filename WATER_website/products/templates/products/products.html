@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <title>Продукция</title>
     {% csrf_token %}
-    <link rel="icon" href="{% static 'media/images/2ad6f96f-06ca-5451-e5e7-00ab06c825b4.PNG' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'media/images/2.PNG' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
 <link rel="stylesheet" href="{% static 'css/products1.css' %}" media="screen">
     <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
@@ -18,7 +18,7 @@
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "",
-		"logo": "{% static 'media/images/af654cee-742c-48e1-bda9-c2dfbb899b15.PNG' %}"
+		"logo": "{% static 'media/images/2.PNG' %}"
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Продукция">
@@ -26,7 +26,7 @@
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-path-to-root="./" data-include-products="true" class="u-body u-xl-mode" data-lang="ru"><header class="u-clearfix u-header u-white u-header" id="sec-c787"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="/" class="u-image u-logo u-image-1" data-image-width="1391" data-image-height="1387">
-          <img src="{% static 'media/images/af654cee-742c-48e1-bda9-c2dfbb899b15.PNG' %}" class="u-logo-image u-logo-image-1">
+          <img src="{% static 'media/images/2.PNG' %}" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse u-custom-font u-font-arial" style="font-size: 1rem; letter-spacing: 0px;">
@@ -177,14 +177,14 @@
           <p class="u-text u-text-default u-text-10">Доставка в пределах МКАД:<br>⦁ При сумме заказа от 4 800 руб. - бесплатно в пределах МКАД<br>⦁ При сумме заказа до 4 800 руб. - только самовывоз по адресу: ул. Дмитрия Ульянова, дом 31 (по предварительному согласованию)<br>Доставка за МКАД:<br>⦁ До 5 км. от МКАД. Минимальная стоимость заказа 4 800 руб. Доставка – бесплатно.<br>⦁ От 5 до 20 км. от МКАД. Минимальная стоимость заказа- 9 600 руб. Доставка – бесплатно.<br>⦁ От 20 до 30 км. от МКАД. Минимальная стоимость заказа – 14 400 руб. Доставка – 800 руб.
           </p>
           <div class="custom-expanded u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-form u-form-1">
-            <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
+            <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical " source="email" name="form" style="padding: 10px;">
               <div class="u-form-group u-form-name">
                 <label for="nickname" class="u-label">Имя</label>
                 <input type="text" placeholder="Введите Ваше имя" id="nickname" name="name" class="u-input u-input-rectangle">
               </div>
               <div class="u-form-group u-form-phone u-form-group-2">
                 <label for="phone" class="u-label">Телефон</label>
-                <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Телефон в формате +7" id="phone" name="phone" class="u-input u-input-rectangle">
+                <input type="tel" placeholder="Телефон в формате +7" id="phone" name="phone" class="u-input u-input-rectangle">
               </div>
               <div class="u-form-group u-form-group-3">
                 <label for="adress" class="u-label">Адрес доставки</label>
@@ -291,30 +291,30 @@
               updateTotal();
             });
         </script>
-        <script>
-            var orderButton = document.getElementById("Order");
-            var successMessage = document.getElementById('Send');
-            var errorMessage = document.getElementById('Wasnt sent');
+<!--        <script>-->
+<!--            var orderButton = document.getElementById("Order");-->
+<!--            var successMessage = document.getElementById('Send');-->
+<!--            var errorMessage = document.getElementById('Wasnt sent');-->
 
 
-            orderButton.addEventListener('click', function() {
-                const nickname = document.getElementById('nickname').value;
-                const phone = document.getElementById('phone').value;
-                const adress = document.getElementById('adress').value;
+<!--            orderButton.addEventListener('click', function() {-->
+<!--                const nickname = document.getElementById('nickname').value;-->
+<!--                const phone = document.getElementById('phone').value;-->
+<!--                const adress = document.getElementById('adress').value;-->
 
-                if (nickname.trim() === '' || phone.trim() === '' || adress.trim() === '') {
-                  errorMessage.style.display = 'block';
-                  setTimeout(function() {
-                    errorMessage.style.display = 'none';
-                    }, 3000);
-                } else {
-                    successMessage.style.display = 'block';
-                    setTimeout(function() {
-                    successMessage.style.display = 'none';
-                    }, 3000);
-                }
-            });
-        </script>
+<!--                if (nickname.trim() === '' || phone.trim() === '' || adress.trim() === '') {-->
+<!--                  errorMessage.style.display = 'block';-->
+<!--                  setTimeout(function() {-->
+<!--                    errorMessage.style.display = 'none';-->
+<!--                    }, 3000);-->
+<!--                } else {-->
+<!--                    successMessage.style.display = 'block';-->
+<!--                    setTimeout(function() {-->
+<!--                    successMessage.style.display = 'none';-->
+<!--                    }, 3000);-->
+<!--                }-->
+<!--            });-->
+<!--        </script>-->
         <script>
             const sendButton = document.getElementById('Order');
             function sendMessage(event) {
