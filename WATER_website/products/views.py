@@ -1,36 +1,47 @@
 from django.shortcuts import render
 import json
 from django.http import JsonResponse
-from aiogram import types, Dispatcher, Bot
-from aiogram.types import Update
-from aiogram.fsm.storage.memory import MemoryStorage
-import asyncio
+from telegram.ext import CommandHandler, MessageHandler, Updater
 
 
 def products(request):
     return render(request, 'products/products.html')
 
-async def telegram_message(nickname, phone, adress):
 
-    bot = Bot("6747649824:AAEfNPhBSF3DZ9jL9P4AFfN_StAeKC21q1Q")
-    storage = MemoryStorage()
-    dispatcher = Dispatcher(storage=storage)
-    chat_id = '281887511'
-    await bot.send_message(chat_id, f"New order:\nName: {nickname} \nPhone: {phone} \nAdress: {adress}")
-
-async def send_telegram_message(nickname, phone, adress):
-    storage = MemoryStorage()
-    dispatcher = Dispatcher(storage=storage)
-    await telegram_message(nickname, phone, adress)
+ID = 0
+users_to_notify = ['1936648481', '281887511'] # '424493530'
+token = "6747649824:AAEfNPhBSF3DZ9jL9P4AFfN_StAeKC21q1Q"
+updater = Updater(token)
 
 
-def sendMessage(request):
+def telegram_message(nickname, phone, adress, amount0_5, amount1_5, itog):
+    global ID
+    ID += 1
+    for chat_id in users_to_notify:
+        updater.bot.send_message(chat_id, f"Order #{ID}:\n"
+                                             f"Количество Упаковок (24 шт. по 0.5 л): {amount0_5}\n"
+                                             f"Количество Упаковок (6 шт. по 1.5 л): {amount1_5}\n"
+                                             f"Итоговая {itog}\n"
+                                             f"Name: {nickname}\n"
+                                             f"Phone: {phone}\n"
+                                             f"Adress: {adress}")
+
+
+def send_telegram_message(nickname, phone, adress, amount0_5, amount1_5, itog):
+    telegram_message(nickname, phone, adress, amount0_5, amount1_5, itog)
+
+
+def send_message_async(request):
     if request.method == "POST":
         data = json.loads(request.body)
         nickname = data.get('nickname')
         phone = data.get('phone')
         adress = data.get('adress')
-        asyncio.run(send_telegram_message(nickname, phone, adress))
+        amount0_5 = data.get('amount0_5')
+        amount1_5 = data.get('amount1_5')
+        itog = data.get('itog')
+
+        send_telegram_message(nickname, phone, adress, amount0_5, amount1_5, itog)
 
         return JsonResponse({'message': 'Сообщение получено и обработано успешно!'}, status=200)
     else:
