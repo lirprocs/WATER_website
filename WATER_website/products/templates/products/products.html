@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <title>Продукция</title>
     {% csrf_token %}
-    <link rel="icon" href="{% static 'media/images/2.PNG' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'media/images/2.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
 <link rel="stylesheet" href="{% static 'css/products1.css' %}" media="screen">
     <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
@@ -18,7 +18,7 @@
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "",
-		"logo": "{% static 'media/images/2.PNG' %}"
+		"logo": "{% static 'media/images/2.png' %}"
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Продукция">
@@ -26,7 +26,7 @@
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-path-to-root="./" data-include-products="true" class="u-body u-xl-mode" data-lang="ru"><header class="u-clearfix u-header u-white u-header" id="sec-c787"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="/" class="u-image u-logo u-image-1" data-image-width="1391" data-image-height="1387">
-          <img src="{% static 'media/images/2.PNG' %}" class="u-logo-image u-logo-image-1">
+          <img src="{% static 'media/images/2.png' %}" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse u-custom-font u-font-arial" style="font-size: 1rem; letter-spacing: 0px;">
@@ -138,7 +138,7 @@
 
             <div class="u-align-center u-container-style u-shape-rectangle u-tab-pane" id="tab-14b7" role="tabpanel" aria-labelledby="link-tab-14b7">
               <div class="u-container-layout u-container-layout-2">
-                <img class="custom-expanded u-image u-image-default u-image-2" src="{% static 'media/images/Frame 6.PNG' %}" alt="" data-image-width="2209" data-image-height="1271">
+                <img class="custom-expanded u-image u-image-default u-image-2" src="{% static 'media/images/Frame 6.png' %}" alt="" data-image-width="2209" data-image-height="1271">
                 <a href="https://ozon.ru/t/XY741gW" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-5">ПЕРЕЙТИ К ЗАКАЗУ</a>
                 <p class="u-text u-text-9">Для преобретения данного товара в меньшем количестве воспользуйтесь платформой OZON для оформления заказа.</p>
               </div>
@@ -157,14 +157,14 @@
           <div class="u-border-2 u-border-grey-75 u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
             <div class="u-container-layout u-container-layout-2">
               <p class="u-text u-text-default u-text-2">Упаковка&nbsp;24 шт. по 0.5 л.</p>
-              <img class="u-image u-image-default u-image-1" src="{% static 'media/images/11.PNG' %}" alt="" data-image-width="1680" data-image-height="1260">
+              <img class="u-image u-image-default u-image-1" src="{% static 'media/images/11.png' %}" alt="" data-image-width="1680" data-image-height="1260">
               <a id="+_1" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-btn-1" >+</a>
               <h3 id="KOL 0,5" class="u-text u-text-3" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">4</h3>
               <a id="-_1" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-btn-2">-</a>
               <p class="u-text u-text-4">(1320 р. за упаковку)</p>
               <a id="X_1" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-text-black u-btn-3">X</a>
               <p class="u-text u-text-default u-text-5"> Упаковка 6 шт. по 1.5 л.</p>
-              <img class="u-image u-image-contain u-image-default u-image-2" src="{% static 'media/images/12.PNG' %}" alt="" data-image-width="1680" data-image-height="1260">
+              <img class="u-image u-image-contain u-image-default u-image-2" src="{% static 'media/images/12.png' %}" alt="" data-image-width="1680" data-image-height="1260">
               <a id="+_2" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-btn-4">+</a>
               <h3 id="KOL 1,5" class="u-text u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000">10</h3>
               <a id="-_2" class="u-border-2 u-border-black u-border-hover-black u-btn u-btn-round u-button-style u-none u-radius-50 u-btn-5">-</a>
@@ -516,7 +516,12 @@
 
 @media (max-width: 1199px) {
   .u-dialog-section-5 .u-group-1 {
-    height: auto;
+    width: 340px;
+    min-height: 500px;
+    max-height: 10000px;
+    height: 1000px;
+    overflow-y: auto !important;
+    display: block;
   }
 
   .u-dialog-section-5 .u-text-2 {
@@ -604,6 +609,11 @@
 @media (max-width: 991px) {
   .u-dialog-section-5 .u-dialog-1 {
     width: 720px;
+    min-height: 500px;
+    max-height: 800px;
+    height: 700px;
+    overflow-y: auto !important;
+    display: block;
   }
 
   .u-dialog-section-5 .u-btn-1 {
@@ -664,6 +674,11 @@
 @media (max-width: 767px) {
   .u-dialog-section-5 .u-dialog-1 {
     width: 540px;
+    min-height: 500px;
+    max-height: 800px;
+    height: 700px;
+    overflow-y: auto !important;
+    display: block;
   }
 
   .u-dialog-section-5 .u-container-layout-1 {
@@ -728,7 +743,11 @@
 @media (max-width: 575px) {
   .u-dialog-section-5 .u-dialog-1 {
     width: 340px;
-    min-height: 1437px;
+    min-height: 500px;
+    max-height: 800px;
+    height: 600px;
+    overflow-y: auto !important;
+    display: block;
   }
 
   .u-dialog-section-5 .u-container-layout-1 {
