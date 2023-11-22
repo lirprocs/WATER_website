@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <link rel="stylesheet" href="{% static 'css/feedback.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Отзывы</h1>
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <!-- Количество элементов устанавливается динамически -->
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <p>Отзывов пока нет.</p>
+            </div>
+            <!-- Отзывы будут добавлены динамически с помощью JavaScript -->
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Форма для отправки отзыва -->
+    <form id="review-form">
+        <input type="text" name="name" placeholder="ФИО" required>
+        <input type="tel" name="phone" placeholder="Номер телефона" required>
+        <input type="number" name="rating" min="1" max="5" placeholder="Количество звезд (от 1 до 5)" required>
+        <textarea name="review" rows="4" placeholder="Напишите отзыв здесь" required></textarea>
+        <button type="submit">Отправить отзыв</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Отправка формы отзыва
+            $('#review-form').submit(function(e) {
+                e.preventDefault();
+                // Получение данных из формы
+                var formData = $(this).serialize();
+                // Здесь вы отправляете formData на сервер с помощью AJAX-запроса
+                // После успешной отправки, можете добавить отзыв в карусель с помощью JavaScript
+                // Пример:
+                $('.carousel-inner').append('<div class="item"><p>' + formData.review + '</p><p><strong>' + formData.name + '</strong></p></div>');
+            });
+        });
+    </script>
+</body>
+</html>

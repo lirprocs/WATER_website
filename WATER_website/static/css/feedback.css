@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+#carousel-example-generic {
+  margin: 20px auto;
+  width: 50%;
+}
+
+#carousel-example-generic .carousel-inner .item {
+  border: 1px solid #478ac9;
+  padding: 10px;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input, form textarea {
+  margin: 10px;
+  padding: 5px;
+  width: 50%;
+}
+
+form button {
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: #478ac9;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Стили для карусели в Bootstrap */
+
+.carousel-indicators li {
+  background-color: #478ac9;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+  background-color: #478ac9;
+  border: none;
+}
+
+.carousel-control.left {
+  margin-left: 10px;
+}
+
+.carousel-control.right {
+  margin-right: 10px;
+}
