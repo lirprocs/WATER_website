@@ -7,54 +7,55 @@ function sendMessage(event) {
         .find(row => row.startsWith('csrftoken='))
         .split('=')[1];
       return cookieValue;
-    }
+    };
 
     const nickname = document.getElementById('nickname').value;
     const phone = document.getElementById('phone').value;
     const adress = document.getElementById('adress').value;
     const amount0_5 = document.getElementById("KOL 0,5").innerText;
     const amount1_5 = document.getElementById("KOL 1,5").innerText;
-    const itog = document.getElementById("ITOG").innerText;
+    const itog = parseFloat(document.getElementById("sum").innerText);
 
-    if (nickname.trim() === '' || phone.trim() === '' || adress.trim() === '') {
+    if (nickname.trim() === '' || phone.trim() === '' || adress.trim() === '' || itog < 4800) {
       document.getElementById("Wasnt sent").style.display = 'block';
       setTimeout(function() {
       document.getElementById("Wasnt sent").style.display = 'none';
       }, 3000);
-    }
+    }  else {
 
-    const xhr = new XMLHttpRequest();
+      const xhr = new XMLHttpRequest();
 
-    xhr.open('POST', 'products/sendMessage', true);
+      xhr.open('POST', 'products/sendMessage', true);
 
-    const csrf_token = getCSRFToken();
+      const csrf_token = getCSRFToken();
 
-    xhr.setRequestHeader('X-CSRFToken', csrf_token);
+      xhr.setRequestHeader('X-CSRFToken', csrf_token);
 
-    xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.setRequestHeader('Content-Type', 'application/json');
 
-    const data = {
-    nickname: nickname,
-    phone: phone,
-    adress: adress,
-    amount0_5: amount0_5,
-    amount1_5: amount1_5,
-    itog: itog
+      const data = {
+      nickname: nickname,
+      phone: phone,
+      adress: adress,
+      amount0_5: amount0_5,
+      amount1_5: amount1_5,
+      itog: itog
+      };
+
+      const jsonData = JSON.stringify(data);
+
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          document.getElementById("Send").style.display = 'block';
+          setTimeout(function() {
+            document.getElementById("Send").style.display = 'none';
+            }, 3000);
+        } else {
+            document.getElementById("Wasnt sent").style.display = 'block';
+        };
+      };
+
+      xhr.send(jsonData);
     };
-
-    const jsonData = JSON.stringify(data);
-
-    xhr.onload = function() {
-      if (xhr.status === 200) {
-         document.getElementById("Send").style.display = 'block';
-         setTimeout(function() {
-         document.getElementById("Send").style.display = 'none';
-      }, 3000);
-      }  else {
-         document.getElementById("Wasnt sent").style.display = 'block';
-      }
-    };
-
-    xhr.send(jsonData);
 
 }
