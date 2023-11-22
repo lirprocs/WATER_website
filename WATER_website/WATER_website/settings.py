@@ -24,9 +24,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 SECRET_KEY = 'django-insecure-*4rw(uz%gxi_mei%!*_wvh953=tcp0wjn%9fz@@o()633gpznj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["localhost"]
+#ALLOWED_HOSTS = ["localhost"]
 
 
 # Application definition
@@ -109,7 +109,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = False
+USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -117,7 +117,7 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    BASE_DIR / "static",
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
