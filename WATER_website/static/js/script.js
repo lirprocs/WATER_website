@@ -9,53 +9,81 @@ function sendMessage(event) {
       return cookieValue;
     };
 
-    const nickname = document.getElementById('nickname').value;
-    const phone = document.getElementById('phone').value;
-    const adress = document.getElementById('adress').value;
+    const nickname = document.getElementById('nickname');
+    const phone = document.getElementById('phone');
+    const adress = document.getElementById('adress');
     const amount0_5 = document.getElementById("KOL 0,5").innerText;
     const amount1_5 = document.getElementById("KOL 1,5").innerText;
     const itog = parseFloat(document.getElementById("sum").innerText);
 
-    if (nickname.trim() === '' || phone.trim() === '' || adress.trim() === '' || itog < 4800) {
-      document.getElementById("Wasnt sent").style.display = 'block';
-      setTimeout(function() {
-      document.getElementById("Wasnt sent").style.display = 'none';
-      }, 3000);
-    }  else {
+    var nameError = document.getElementById('Name');
+    var numberError = document.getElementById('Number');
+    var addressError = document.getElementById('Address');
+    var minError = document.getElementById('Min');
 
-      const xhr = new XMLHttpRequest();
+    nameError.style.display = 'none';
+    numberError.style.display = 'none';
+    addressError.style.display = 'none';
+    minError.style.display = 'none';
 
-      xhr.open('POST', 'products/sendMessage', true);
 
-      const csrf_token = getCSRFToken();
+    if (!nickname.value.trim()) {
+      nameError.style.display = 'block';
+      return;
+    }
 
-      xhr.setRequestHeader('X-CSRFToken', csrf_token);
+    // Check if the phone number is not empty
+    if (!phone.value.trim()) {
+      numberError.style.display = 'block';
+      return;
+    }
 
-      xhr.setRequestHeader('Content-Type', 'application/json');
+    // Check if the address is not empty
+    if (!adress.value.trim()) {
+      addressError.style.display = 'block';
+      return;
+    }
 
-      const data = {
-      nickname: nickname,
-      phone: phone,
-      adress: adress,
-      amount0_5: amount0_5,
-      amount1_5: amount1_5,
-      itog: itog
-      };
+    if (!itog.value.trim()) {
+      addressError.style.display = 'block';
+      return;
+    }
 
-      const jsonData = JSON.stringify(data);
+        const xhr = new XMLHttpRequest();
 
-      xhr.onload = function() {
+        xhr.open('POST', 'products/sendMessage', true);
+
+        const csrf_token = getCSRFToken();
+
+        xhr.setRequestHeader('X-CSRFToken', csrf_token);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+
+        const data = {
+        nickname: nickname,
+        phone: phone,
+        adress: adress,
+        amount0_5: amount0_5,
+        amount1_5: amount1_5,
+        itog: itog
+        };
+
+        const jsonData = JSON.stringify(data);
+
+        xhr.onload = function() {
         if (xhr.status === 200) {
-          document.getElementById("Send").style.display = 'block';
-          setTimeout(function() {
-            document.getElementById("Send").style.display = 'none';
+            document.getElementById("Send").style.display = 'block';
+            setTimeout(function() {
+                document.getElementById("Send").style.display = 'none';
             }, 3000);
         } else {
             document.getElementById("Wasnt sent").style.display = 'block';
+            setTimeout(function() {
+                document.getElementById("Wasnt sent").style.display = 'none';
+            }, 3000);
+            }
         };
-      };
+        xhr.send(jsonData);
 
-      xhr.send(jsonData);
-    };
+}
 
 }
